@@ -7,3 +7,8 @@ CodeChef — mostly focused on implementation, brute force, math,
 strings and greedy problems.
 
 Still learning and improving every day.
+
+## Profiles
+- [Codeforces](https://codeforces.com/profile/Rayhan_islam)
+  
+- [CodeChef](https://www.codechef.com/users/rayhanislam)

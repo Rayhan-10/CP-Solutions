@@ -4,41 +4,35 @@ using ll = long long;
 #define endl '\n'
 
 void solve() {
-    ll n, k;
-    cin >> n >> k;
+    int n;
+    cin >> n;
 
-    ll rem1 = n - (k - 1);
-    if (rem1 > 0 && rem1 % 2 != 0) {
-        cout << "YES" << endl;
-        for (int i = 0; i < k - 1; i++) {
-            cout << 1 << " ";
-        }
-        cout << rem1 << endl;
-        return;
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
     }
 
-    ll rem2 = n - 2 * (k - 1);
-    if (rem2 > 0 && rem2 % 2 == 0) {
-        cout << "YES" << endl;
-        for (int i = 0; i < k - 1; i++) {
-            cout << 2 << " ";
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            for (int k = 0; k < n; k++) {
+                if (i != j && j != k && i != k) {
+                    if (a[i] == a[j] + a[k]) {
+                        cout << i + 1 << " " << j + 1 << " " << k + 1 << endl;
+                        return;
+                    }
+                }
+            }
         }
-        cout << rem2 << endl;
-        return;
     }
 
-    cout << "NO" << endl;
+    cout << -1 << endl;
 }
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int t;
-    cin >> t;
-    while (t--) {
-        solve();
-    }
+    solve();
 
     return 0;
 }

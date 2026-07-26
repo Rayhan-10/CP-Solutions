@@ -36,10 +36,9 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int TC = 1;
-    while (TC--) {
+    
         solve();
-    }
+    
 
     return 0;
 }
